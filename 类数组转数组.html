@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="dj" name='dj'>
+    <div name="kk">asd</div>
+  </div>
+</body>
+</html>
+<script>
+    /* 类数组，有length属性，props 是 number类型 */
+    /*
+    常见的类数组
+    getElementByTagName,getElementByClassName
+    querySelector 获取 nodeList
+  */
+  // let dom = document.getElementByTagName('div')
+  let dom = document.getElementsByTagName('div')
+  // 数组 slice 方法
+  console.log(Array.prototype.slice.call(dom));
+  console.log(dom.namedItem('dj'));
+  let a = {name:'dj'};
+  let arr = [a,{sd:'123'}]
+  console.log(arr.splice);
+  let arr1 = [1,2,3,4]
+  // 数组的删除方法
+  // slice splice pop shift 
+  // 复制数组
+  // slice 
+  console.log(arr1.slice());
+  console.log(arr1.splice(0,2,...['11',2213,22444],1),arr1);
+  
+</script>
