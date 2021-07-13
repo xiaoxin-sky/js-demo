@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .setBorderAll {
+        position: relative;
+        width: 100px;
+        height: 100px;
+      }
+      .setBorderAll:after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: left top;
+        box-sizing: border-box;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+      }
+      div:nth-of-type(2){
+        border-radius: 4px;
+        width: 100px;
+        height: 100px;
+        margin-top: 5px;
+        border: .5px solid #e5e5e5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="setBorderAll">asdsa</div>
+    <div></div>
+  </body>
+</html>
