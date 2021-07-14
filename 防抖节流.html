@@ -1,11 +1,13 @@
-<body></body>
+<body>
+  <button id="btn">anniu</button>
+</body>
 <script>
   // 节流: 要求每个固定时间无论触发多少次事件，而函数只执行一次
   function fd(fn) {
     let onoff = true;
     return () => {
       if (onoff) {
-        fn();
+        fn.call(this);
         onoff = false;
         setTimeout(() => {
           onoff = true;
@@ -13,23 +15,28 @@
       }
     };
   }
-  const fn = () => console.log("执行了");
+  function fn() {
+    console.log(this);
+  }
   // document.body.addEventListener("mousemove", fd(fn));
 
   // 防抖：一个新的事件必须在上次该事件出发后的n秒过后，才能够重新触发函数
   function fd(fn) {
     let onoff = false;
     let timer = null;
-    return () => {
+    return function () {
       if (!onoff) {
         clearTimeout(timer);
         timer = setTimeout(() => {
           fn();
         }, 1000);
       } else {
+        console.log(this);
         fn();
       }
     };
   }
-  document.body.addEventListener("click", fd(fn));
+  // document.body.addEventListener("click", fd(fn));
+  const btn = document.getElementById("btn");
+  btn.addEventListener("click", fd(fn));
 </script>
