@@ -6,35 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .setBorderAll {
-        position: relative;
+      * {
+        margin: 0;
+      }
+      .main {
+        /*         width: 400px;
+        height: 400px; */
+        background: wheat;
+        float: left;
+      }
+      div > div {
         width: 100px;
         height: 100px;
+        border: 1px salmon solid;
+        margin: 1px;
+        margin-top: 20px;
       }
-      .setBorderAll:after {
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 200%;
-        height: 200%;
-        transform: scale(0.5);
-        transform-origin: left top;
-        box-sizing: border-box;
-        border: 1px solid #e5e5e5;
-        border-radius: 4px;
+      .a{
+        margin-top: 20px;
       }
-      div:nth-of-type(2){
-        border-radius: 4px;
-        width: 100px;
-        height: 100px;
-        margin-top: 5px;
-        border: .5px solid #e5e5e5;
+      .suba{
+        width: 50px;
+        height: 50px;
+        background: royalblue;
+        margin-top: 20px;
+      }
+      .b {
+        width: 50px;
+        height: 150px;
+        float: right;
       }
     </style>
   </head>
   <body>
-    <div class="setBorderAll">asdsa</div>
-    <div></div>
+    <div class="main">
+      <div class="a">
+        <div class="suba"></div>
+      </div>
+      <div class="b"></div>
+    </div>
+    asdasdsaasdasdasdsad
+    <div style="float: left;width: 40px;height: 30px;background: red;">float </div>
+    <script>
+      const dom = document.querySelector(".main");
+    </script>
   </body>
 </html>

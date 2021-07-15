@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        display: flex;
+      }
+      .main > div {
+        width: 30px;
+        height: 30px;
+        border: inherit;
+      }
+      .a {
+        align-self: flex-end;
+        flex-grow:;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main self">
+      <div class="a">我是子元素</div>
+      <div class="b"></div>
+      <div class="c"></div>
+    </div>
+  </body>
+</html>

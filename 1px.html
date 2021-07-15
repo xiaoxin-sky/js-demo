@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background: greenyellow;
+        border-radius: 5px;
+      }
+      .main::after {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        border: 1px solid red;
+        border-radius: 10px;
+        transform: scale(0.5);
+        transform-origin: left top;
+        box-sizing: border-box;
+      }
+      .a {
+        width: 100px;
+        height: 100px;
+        /* background: linear-gradient(to left, red 1px, red 1px, green, green 10%); */
+        box-shadow: 0 -1px 1px -1px red, 1px 0 1px -1px red,
+          0 1px 1px -1px red, -1px 0 1px -1px red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main"></div>
+    <div class="a"></div>
+  </body>
+</html>
